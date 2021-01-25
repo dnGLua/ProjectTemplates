@@ -1,7 +1,7 @@
 ## For Visual Studio 2019 IDE
 ### Download
-- [dnGLua.Template.GarrysMod](https://github.com/dnGLua/ProjectTemplates/files/5825218/dnGLua.Template.GarrysMod.zip)
-- [dnGLua.Template.Starfall](https://github.com/dnGLua/ProjectTemplates/files/5825219/dnGLua.Template.Starfall.zip)
+- [dnGLua.Template.GarrysMod](https://github.com/dnGLua/ProjectTemplates/files/5863617/dnGLua.Template.GarrysMod.zip)
+- [dnGLua.Template.Starfall](https://github.com/dnGLua/ProjectTemplates/files/5863618/dnGLua.Template.Starfall.zip)
 
 ### Install
 Just **move** the zip files into the following directory (without unzipping):  
