@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <DefineConstants>STARFALL;CLIENT;SERVER;FEATURE_PROPERTIES</DefineConstants>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="dnGLua.API.Common" Version="*" />
+        <PackageReference Include="dnGLua.API.Starfall" Version="*" />
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="dngluac --input &quot;$(ProjectPath)&quot; --output &quot;$(TargetDir.TrimEnd('\'))&quot; --csc &quot;-define:$(DefineConstants)&quot; --mode Starfall" />
+    </Target>
+
+</Project>

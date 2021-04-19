@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <IsPackable>true</IsPackable>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+        <NoWarn>$(NoWarn);CS2008;CS8021;NU5128</NoWarn>
+        <NoBuild>true</NoBuild>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <PackageOutputPath>$(SolutionDir)nupkg</PackageOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Title>dnGLua Templates</Title>
+        <Authors>Cheatoid</Authors>
+        <Owners>dnGLua</Owners>
+        <Company>dnGLua</Company>
+        <Copyright>Copyright © dnGLua and Contributors</Copyright>
+        <PackageType>Template</PackageType>
+        <PackageId>dnGLua.Templates</PackageId>
+        <Description>Templates to use when creating an application for dnGLua.</Description>
+        <RepositoryUrl>https://github.com/dnGLua/ProjectTemplates</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/dnGLua/ProjectTemplates</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>dotnet-new;templates;dnglua</PackageTags>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageVersion>1.0.0</PackageVersion>
+        <PackageReleaseNotes></PackageReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**"/>
+        <Compile Remove="**\*"/>
+    </ItemGroup>
+
+</Project>

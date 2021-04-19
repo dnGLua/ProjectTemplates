@@ -1,0 +1,50 @@
+// This is a project-specific JSON configuration file (read by dnGLua.Compiler)
+{
+  // You may change this to point at the custom output directory (use %env% syntax to expand environment variable)
+  // i.e. "%GARRYS_MOD%/data/starfall"
+  // Leave blank by default, files are generated into the project's output directory
+  "output": "",
+  
+  "singleFile": {
+    // Set this to true if you want the transpiler to produce a single file compilation
+    "enabled": true,
+    // You may change this to point at the custom CoreSystem directory (leave blank to use embedded)
+    "include": ""
+  },
+  
+  // List of CoreSystem content to be excluded (this can be used to drastically reduce file-size and remove unused code)
+  // You may use Regex matching by prefixing string/pattern with exclamation mark
+  // Warning: Be careful with this; otherwise, you will experience weird runtime error(s)
+  "excludeCoreSystem": [
+    //"TimeSpan",
+    //"DateTime",
+    //"Collections.LinkedList",
+    //"Collections.SortedSet",
+    //"Convert",
+    //"Random",
+    //"Text.StringBuilder",
+    //"Console",
+    //"Reflection.Assembly",
+    //"Threading.Timer",
+    //"Threading.Thread",
+    //"Threading.Task",
+    //"Globalization.Globalization",
+    //"!Numerics.*"
+  ],
+  
+  // List of additional C# compiler command-line arguments
+  "compilerArgs": [
+    //"-define:STARFALL;CLIENT;SERVER;FEATURE_PROPERTIES"
+  ],
+  
+  // List of executable programs to be run during post-processing stage after each Lua file is generated
+  // Use "{0}" in args to specify an absolute path to the generated file
+  // Warning: Order in which certain programs are executed is also of importance (i.e. Minifier should go before Compressor)
+  // Note: When targeting Starfall, an extra argument will be implicitly provided as well: --mode Starfall
+  // For example, this is useful if you want to verify/minify/obfuscate the generated Lua code
+  "postProcess": [
+    //{ "program": "dnGLua.Minifier", "args": "{0}" },
+    //{ "program": "dnGLua.Verifier", "args": "{0}" },
+    //{ "program": "dnGLua.Compressor", "args": "{0}" }
+  ]
+}
